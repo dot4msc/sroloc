@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 # ASEPRITES
-public/img/*.aseprite
+public/img/*/*.aseprite
