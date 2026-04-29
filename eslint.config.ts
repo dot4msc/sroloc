@@ -1,0 +1,23 @@
+import js from "@eslint/js";
+import globals from "globals";
+import tseslint from "typescript-eslint";
+import { defineConfig } from "eslint/config";
+import stylistic from "@stylistic/eslint-plugin";
+
+export default defineConfig([
+  {
+    files: ["**/*.{js,mjs,cjs,ts,mts,cts}"],
+    plugins: { js, "@stylistic": stylistic },
+    extends: ["js/recommended"],
+    languageOptions: { 
+      globals: {...globals.browser, ...globals.node},
+    },
+    rules: {
+      semi: "error",
+      camelcase: "warn",
+      "@stylistic/comma-dangle": ["error", "always-multiline"],
+      "@typescript-eslint/explicit-function-return-type": "error",
+    },
+  },
+  tseslint.configs.recommended,
+]);

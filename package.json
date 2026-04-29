@@ -4,12 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "eslint . && vite",
+    "build": "eslint. && tsc && vite build",
+    "preview": "eslint . && vite preview"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0",
     "typescript": "~6.0.2",
-    "vite": "^8.0.10"
+    "typescript-eslint": "^8.59.1",
+    "vite": "^8.0.10",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "jiti": "^2.6.1"
+  },
+  "dependencies": {
+    "phaser": "^4.0.0"
   }
 }
